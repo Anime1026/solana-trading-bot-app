@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-list {
+  overflow: initial;
+  overflow-x: clip;
+}
+
+@media screen and (max-width: 768px) {
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
+.ft-slick__dots--custom {
+  height: 8px;
+  width: 14px;
+  background-color: #5e5e5e;
+  margin-top: 10px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.slick-dots li {
+  width: 14px;
+  margin: 0 2px;
+}
+
+.slick-dots .slick-active {
+  width: 56px;
+}
+
+.slick-dots .slick-active .ft-slick__dots--custom {
+  width: 56px;
+  background-color: #00b26f;
+}
+
+svg.star-svg {
+  display: inline;
+}
+
+.drop {
+  position: absolute;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+}
+
+.drop:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+  background: #fff;
+}
+
+.drop:after {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+  background: #fff;
+}
+
+.drop:nth-child(2) {
+  transform: scale(0.5) translate(-200px, 180px);
+  border-radius: 45% 55% 64% 36% / 34% 33% 67% 66%;
+}
+
+.drop:nth-child(3) {
+  transform: scale(0.5) translate(280px, 10px);
+  border-radius: 40% 60% 65% 35% / 36% 26% 74% 64%;
+}
