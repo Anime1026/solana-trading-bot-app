@@ -8,11 +8,11 @@ export default function LandingSection() {
 
   const handleStart = async () => {
     if (!state) {
-      const result = await axios.get("http://192.168.136.160:5000/api/start-bot");
+      const result = await axios.get("http://45.9.191.71/api/start-bot");
       if (result.data.state) setState(true);
       else setState(false);
     } else {
-      const result = await axios.get("http://192.168.136.160:5000/api/stop-bot");
+      const result = await axios.get("http://45.9.191.71/api/stop-bot");
       if (result.data.state) setState(false);
       else setState(true);
     }
